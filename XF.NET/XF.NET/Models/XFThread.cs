@@ -4,7 +4,7 @@ using Newtonsoft.Json.Linq;
 
 namespace XF.NET.Models;
 
-public sealed class Thread
+public sealed class XFThread
 {
     [JsonProperty("username")]
     public string Username { get; set; }
@@ -73,7 +73,7 @@ public sealed class Thread
     /// If requested by context, the forum this thread was posted in.
     /// </summary>
     [JsonProperty("Forum")]
-    public Node Forum { get; set; }
+    public XFNode Forum { get; set; }
 
     /// <summary>
     /// The content's vote score (if supported)
@@ -160,6 +160,6 @@ public sealed class Thread
     public int PrefixId { get; set; }
 
     [JsonProperty("User")]
-    public User User { get; set; }
+    public XFUser User { get; set; }
 }
 

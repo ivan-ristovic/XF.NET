@@ -3,7 +3,7 @@ using Newtonsoft.Json;
 
 namespace XF.NET.Models;
 
-public sealed class LinkForum
+public sealed class XFLinkForum
 {
     [JsonProperty("link_url")]
     public string LinkUrl { get; set; }

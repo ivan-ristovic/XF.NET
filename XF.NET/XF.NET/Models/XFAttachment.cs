@@ -3,7 +3,7 @@ using Newtonsoft.Json;
 
 namespace XF.NET.Models;
 
-public sealed class Attachment
+public sealed class XFAttachment
 {
     [JsonProperty("filename")]
     public string Filename { get; set; }

@@ -4,9 +4,8 @@ using Newtonsoft.Json.Linq;
 
 namespace XF.NET.Models;
 
-public sealed class UserField
+public sealed class XFThreadField
 {
-
     [JsonProperty("field_id")]
     public string FieldId { get; set; }
 
@@ -32,7 +31,7 @@ public sealed class UserField
     public string MatchType { get; set; }
 
     [JsonProperty("match_params")]
-    public JArray MatchParams { get; set; }     // TODO
+    public JArray MatchParams { get; set; }         // TODO
 
     [JsonProperty("max_length")]
     public int MaxLength { get; set; }
@@ -45,6 +44,5 @@ public sealed class UserField
     /// </summary>
     [JsonProperty("display_group")]
     public string DisplayGroup { get; set; }
-
 }
 

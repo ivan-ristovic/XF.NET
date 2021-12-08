@@ -4,7 +4,7 @@ using Newtonsoft.Json.Linq;
 
 namespace XF.NET.Models;
 
-public sealed class Node
+public sealed class XFNode
 {
     /// <summary>
     /// A list of breadcrumbs for this node, including the node_id, title, and node_type_id

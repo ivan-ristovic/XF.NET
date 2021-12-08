@@ -3,7 +3,7 @@ using Newtonsoft.Json;
 
 namespace XF.NET.Models;
 
-public sealed class Post
+public sealed class XFPost
 {
     [JsonProperty("username")]
     public string Username { get; set; }
@@ -48,13 +48,13 @@ public sealed class Post
     /// If requested by context, the thread this post is part of.
     /// </summary>
     [JsonProperty("Thread")]
-    public Thread Thread { get; set; }
+    public XFThread Thread { get; set; }
 
     /// <summary>
     /// Attachments to this post, if it has any.
     /// </summary>
     [JsonProperty("Attachments")]
-    public Attachment[] Attachments { get; set; }
+    public XFAttachment[] Attachments { get; set; }
 
     /// <summary>
     /// True if the viewing user has reacted to this content
@@ -132,6 +132,6 @@ public sealed class Post
     public int ReactionScore { get; set; }
 
     [JsonProperty("User")]
-    public User User { get; set; }
+    public XFUser User { get; set; }
 }
 

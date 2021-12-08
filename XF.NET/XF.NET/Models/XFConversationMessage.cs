@@ -3,7 +3,7 @@ using Newtonsoft.Json;
 
 namespace XF.NET.Models;
 
-public sealed class ConversationMessage
+public sealed class XFConversationMessage
 {
     [JsonProperty("username")]
     public string Username { get; set; }
@@ -33,13 +33,13 @@ public sealed class ConversationMessage
     /// If requested by context, the conversation this message is part of.
     /// </summary>
     [JsonProperty("Conversation")]
-    public Conversation Conversation { get; set; }
+    public XFConversation Conversation { get; set; }
 
     /// <summary>
     /// If there are attachments to this message, a list of attachments.
     /// </summary>
     [JsonProperty("Attachments")]
-    public Attachment[] Attachments { get; set; }
+    public XFAttachment[] Attachments { get; set; }
 
     /// <summary>
     /// True if the viewing user has reacted to this content
@@ -75,6 +75,6 @@ public sealed class ConversationMessage
     public int ReactionScore { get; set; }
 
     [JsonProperty("User")]
-    public User User { get; set; }
+    public XFUser User { get; set; }
 }
 

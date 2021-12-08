@@ -3,7 +3,7 @@ using Newtonsoft.Json;
 
 namespace XF.NET.Models;
 
-public sealed class ThreadPrefix
+public sealed class XFThreadPrefix
 {
     [JsonProperty("prefix_id")]
     public int PrefixId { get; set; }

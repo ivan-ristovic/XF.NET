@@ -66,6 +66,6 @@ public sealed class XFRM_ResourceItem
     public XFRM_Category Category { get; set; }
 
     [JsonProperty("User")]
-    public User User { get; set; }
+    public XFUser User { get; set; }
 }
 

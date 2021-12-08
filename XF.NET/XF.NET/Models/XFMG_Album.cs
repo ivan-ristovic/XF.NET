@@ -72,6 +72,6 @@ public sealed class XFMG_Album
     public int ReactionScore { get; set; }
 
     [JsonProperty("User")]
-    public User User { get; set; }
+    public XFUser User { get; set; }
 }
 

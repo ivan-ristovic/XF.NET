@@ -3,7 +3,7 @@ using Newtonsoft.Json;
 
 namespace XF.NET.Models;
 
-public sealed class Forum
+public sealed class XFForum
 {
     [JsonProperty("forum_type_id")]
     public string ForumTypeId { get; set; }

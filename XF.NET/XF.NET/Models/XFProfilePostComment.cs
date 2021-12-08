@@ -3,7 +3,7 @@ using Newtonsoft.Json;
 
 namespace XF.NET.Models;
 
-public sealed class ProfilePost
+public sealed class XFProfilePostComment
 {
     [JsonProperty("username")]
     public string Username { get; set; }
@@ -29,26 +29,17 @@ public sealed class ProfilePost
     [JsonProperty("can_view_attachments")]
     public bool CanViewAttachments { get; set; }
 
-    [JsonProperty("view_url")]
-    public string ViewUrl { get; set; }
-
-    /// <summary>
-    /// If requested by context, the user this profile post was left for.
-    /// </summary>
-    [JsonProperty("ProfileUser")]
-    public User Profileuser { get; set; }
-
     /// <summary>
     /// Attachments to this profile post, if it has any.
     /// </summary>
     [JsonProperty("Attachments")]
-    public Attachment[] Attachments { get; set; }
+    public XFAttachment[] Attachments { get; set; }
 
     /// <summary>
-    /// If requested, the most recent comments on this profile post.
+    /// If requested by context, the profile post this comment relates to.
     /// </summary>
-    [JsonProperty("LatestComments")]
-    public ProfilePostComment[] Latestcomments { get; set; }
+    [JsonProperty("ProfilePost")]
+    public XFProfilePost Profilepost { get; set; }
 
     /// <summary>
     /// True if the viewing user has reacted to this content
@@ -62,17 +53,17 @@ public sealed class ProfilePost
     [JsonProperty("visitor_reaction_id")]
     public int VisitorReactionId { get; set; }
 
+    [JsonProperty("profile_post_comment_id")]
+    public int ProfilePostCommentId { get; set; }
+
     [JsonProperty("profile_post_id")]
     public int ProfilePostId { get; set; }
-
-    [JsonProperty("profile_user_id")]
-    public int ProfileUserId { get; set; }
 
     [JsonProperty("user_id")]
     public int UserId { get; set; }
 
-    [JsonProperty("post_date")]
-    public int PostDate { get; set; }
+    [JsonProperty("comment_date")]
+    public int CommentDate { get; set; }
 
     [JsonProperty("message")]
     public string Message { get; set; }
@@ -83,19 +74,10 @@ public sealed class ProfilePost
     [JsonProperty("warning_message")]
     public string WarningMessage { get; set; }
 
-    [JsonProperty("comment_count")]
-    public int CommentCount { get; set; }
-
-    [JsonProperty("first_comment_date")]
-    public int FirstCommentDate { get; set; }
-
-    [JsonProperty("last_comment_date")]
-    public int LastCommentDate { get; set; }
-
     [JsonProperty("reaction_score")]
     public int ReactionScore { get; set; }
 
     [JsonProperty("User")]
-    public User User { get; set; }
+    public XFUser User { get; set; }
 }
 

@@ -7,7 +7,7 @@ namespace XF.NET.Models;
 /// <summary>
 /// Information about the user. Different information will be included based on permissions and verbosity.
 /// </summary>
-public sealed class User
+public sealed class XFUser
 {
     [JsonProperty("about")]
     public string About { get; set; }

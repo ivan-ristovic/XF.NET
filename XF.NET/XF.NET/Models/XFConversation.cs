@@ -3,7 +3,7 @@ using Newtonsoft.Json;
 
 namespace XF.NET.Models;
 
-public sealed class Conversation
+public sealed class XFConversation
 {
     /// <summary>
     /// Name of the user that started the conversation
@@ -81,6 +81,6 @@ public sealed class Conversation
     public int LastMessageUserId { get; set; }
 
     [JsonProperty("Starter")]
-    public User Starter { get; set; }
+    public XFUser Starter { get; set; }
 }
 

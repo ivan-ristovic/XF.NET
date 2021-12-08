@@ -69,6 +69,6 @@ public sealed class XFMG_MediaItem
     public int ReactionScore { get; set; }
 
     [JsonProperty("User")]
-    public User User { get; set; }
+    public XFUser User { get; set; }
 }
 

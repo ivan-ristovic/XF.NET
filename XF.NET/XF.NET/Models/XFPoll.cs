@@ -4,7 +4,7 @@ using Newtonsoft.Json.Linq;
 
 namespace XF.NET.Models;
 
-public sealed class Poll
+public sealed class XFPoll
 {
     [JsonProperty("can_vote")]
     public bool CanVote { get; set; }
