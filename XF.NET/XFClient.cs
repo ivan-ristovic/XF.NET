@@ -15,23 +15,15 @@ namespace XF.NET
 
         private Uri ApiUrl { get; }
         private string ApiKey { get; }
-        public IReadOnlyList<XFEndpoint> Endpoints { get; }
 
 
-        public XFClient(Uri apiUrl, string apiKey)
+        public XFClient(Uri apiUrl, string apiKey, int? asUser)
         {
             if (!apiUrl.ToString().EndsWith('/'))
                 apiUrl = new Uri(apiUrl.ToString() + "/");
             this.ApiUrl = apiUrl;
             this.ApiKey = apiKey;
-            this.Users = new UsersXFEndpoint(this.ApiUrl, _http, this.ApiKey);
-
-            this.Endpoints = typeof(XFClient)
-                .GetFields()
-                .Where(f => typeof(XFEndpoint).IsAssignableFrom(f.FieldType))
-                .Select(f => f.GetValue(this) as XFEndpoint ?? throw new NullReferenceException())
-                .ToList()
-                .AsReadOnly();
+            this.Users = new UsersXFEndpoint(this.ApiUrl, _http, this.ApiKey, asUser);
         }
 
 
