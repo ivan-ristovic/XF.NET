@@ -2,7 +2,7 @@
 
 # XF.NET
 
-A simple XenForo API wrapper written in C# (.NET6). Made because I have not found any existing XenForo API wrappers written in C# that are actively maintained.
+A simple XenForo API wrapper written in C# (.NET 6.0). Made because I have not found any existing XenForo API wrappers written in C# that are actively maintained.
 
 ## Roadmap
 - [x] Models (almost complete)
