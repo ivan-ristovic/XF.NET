@@ -23,10 +23,10 @@ namespace XF.NET
                 apiUrl = new Uri(apiUrl.ToString() + "/");
             this.ApiUrl = apiUrl;
             this.ApiKey = apiKey;
-            this.Users = new UsersXFEndpoint(this.ApiUrl, _http, this.ApiKey, asUser);
+            this.Users = new _UsersXFEndpoint(this.ApiUrl, _http, this.ApiKey, asUser);
         }
 
 
-        public readonly UsersXFEndpoint Users;
+        public readonly _UsersXFEndpoint Users;
     }
 }
